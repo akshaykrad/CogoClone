@@ -35,6 +35,7 @@ h6 {
 
 h2 {
   font-size: 40px;
+  line-height: 1.2;
 }
 
 h3 {
@@ -370,7 +371,7 @@ h3 {
 }
 
 .second-box {
-  height: 324.967px;
+  margin-top: 40px;
   width: 1200px;
   padding: 16px;
   display: flex;
@@ -379,14 +380,29 @@ h3 {
 }
 
 .second-box-item1 {
-  height: 127px;
-  width: 584px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+.second-box-item1 h2 {
+  margin-bottom: 10px;
+}
+.second-box-item1 span {
+  font-family: var(--font-family);
 }
 .second-box-item2 {
-  height: 292.967px;
-  width: 584px;
   display: flex;
-  flex-direction: column-reverse;
+  flex: 1 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  justify-content: flex-end;
+}
+.second-box-img {
+  display: block;
+  width: 500px;
+  object-fit: contain;
+  height: 100%;
 }
 .second-h2 {
   margin: 0 0 10px 0;
@@ -405,14 +421,10 @@ h3 {
   margin: 0 0 28px 0;
 }
 .third-item2 {
-  height: 1040px;
-  width: 1166px;
   display: flex;
   flex-direction: column;
 }
 .third-child {
-  height: 180px;
-  width: 1166px;
   margin: 14px 0;
   display: flex;
   align-items: center;
@@ -1084,6 +1096,12 @@ h3 {
 }
 
 @media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
   .notification {
     height: 48px;
   }
@@ -1153,9 +1171,6 @@ h3 {
     width: 50%;
     text-align: center;
   }
-  .first-box-child-item h2 {
-    font-size: 24px;
-  }
   .first-box-child-item h4 {
     font-size: 14px;
   }
@@ -1164,10 +1179,59 @@ h3 {
     margin-bottom: 32px;
   }
   .second-box {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column-reverse;
     width: 100% !important;
     padding-right: 16px !important;
     padding-left: 16px !important;
+  }
+  .second-box-img {
+    box-sizing: border-box;
+    width: 320px;
+    height: 187.5px;
+  }
+  .third-box {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .third-item1 {
+    padding: 0;
+    margin-bottom: 0;
+    text-align: inherit;
+  }
+  .third-item2 {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .third-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .third-child-h4 {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    font-size: 16px;
+  }
+  .third-card-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .third-card {
+    width: 128px;
+    height: 128px;
+    padding: 0;
+    margin: 8px;
+  }
+  .third-card-h4{
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .third-card-span{
+    margin: 8px 0 6px 8px;
+  }
+  .third-card-span span{
+    font-size: 12px;
   }
 }
